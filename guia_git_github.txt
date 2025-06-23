@@ -1,0 +1,115 @@
+
+📝 GUIA COMPLETO – GIT E GITHUB (PASSO A PASSO)
+(Salve este arquivo para futuras consultas)
+
+---
+
+## 🚀 1. ENVIAR UM PROJETO PARA O GITHUB PELA PRIMEIRA VEZ
+
+### Pré-requisitos:
+- Ter o Git instalado
+- Ter uma conta no GitHub
+- Ter criado um repositório vazio no GitHub (sem README)
+
+### PASSOS:
+
+Abra o terminal na pasta do seu projeto:
+
+1. Iniciar o repositório local
+    git init
+
+2. Adicionar todos os arquivos ao controle do Git
+    git add .
+
+3. Fazer o primeiro commit
+    git commit -m "primeiro commit"
+
+4. Renomear o branch principal para main
+    git branch -M main
+
+5. Conectar com o repositório do GitHub
+    git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+6. Enviar para o GitHub
+    git push -u origin main
+
+✅ Pronto! O projeto agora está no seu GitHub.
+
+---
+
+## 🔄 2. COMO ENVIAR MUDANÇAS FUTURAS
+
+1. Salve as alterações no projeto
+
+2. Abra o terminal na pasta do projeto
+
+3. Adicione as mudanças
+    git add .
+
+4. Faça um novo commit
+    git commit -m "descrição da mudança"
+
+5. Envie para o GitHub
+    git push
+
+---
+
+## 💻 3. COMO CONTINUAR DE OUTRO LOCAL OU PENDRIVE
+
+### 🔁 Método recomendado: CLONAR O REPOSITÓRIO
+
+1. No novo PC, abra o terminal
+
+2. Clone o projeto do GitHub
+    git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+
+3. Entre na pasta clonada
+    cd nome_da_pasta
+
+4. Trabalhe normalmente:
+    git add .
+    git commit -m "mudanças feitas no outro PC"
+    git push
+
+### 📁 Método alternativo: copiar pelo pendrive
+
+1. Copie a pasta do projeto inteira (com a pasta .git dentro)
+
+2. Cole no novo PC e abra o terminal nessa pasta
+
+3. Se já tiver .git, basta continuar normalmente:
+    git add .
+    git commit -m "mudanças feitas no novo local"
+    git push
+
+4. Se NÃO tiver .git, reconecte ao repositório:
+    git init
+    git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+    git branch -M main
+    git add .
+    git commit -m "enviando mudanças a partir do pendrive"
+    git push -u origin main
+
+---
+
+## ⚠️ DICAS EXTRAS
+
+- Sempre use git pull antes de começar em outro PC:
+    git pull origin main
+
+- Ver o status atual do Git:
+    git status
+
+- Ver o histórico de commits:
+    git log
+
+---
+
+## 📦 OPCIONAL – ARQUIVO .gitignore
+
+Crie um arquivo chamado .gitignore e adicione:
+    .idea/
+    __pycache__/
+    *.pyc
+    .venv/
+    .env
